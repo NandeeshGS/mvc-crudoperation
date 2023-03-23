@@ -25,6 +25,7 @@ public class StudentService {
 	public ModelAndView load() {
 		ModelAndView andView = new ModelAndView("Create");
 		andView.addObject("student", student);
+		
 		return andView;
 
 	}
@@ -37,6 +38,7 @@ public class StudentService {
 
 		dao.save(student);
 		andView.addObject("msg", "Data added Successfully");
+		
 		return andView;
 	}
 
@@ -61,6 +63,7 @@ public class StudentService {
 		ModelAndView andView = new ModelAndView("Edit");
 		andView.addObject("student", dao.find(id));
 		andView.addObject("edit", "Data edited Successfully");
+		
 		return andView;
 	}
 
